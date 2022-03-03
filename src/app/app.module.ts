@@ -6,6 +6,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
 import { ViewFilmComponent } from './view-film/view-film.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { NoteComponent } from './note/note.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NoteComponent } from './note/note.component';
     NoteComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
