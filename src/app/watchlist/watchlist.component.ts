@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {movies} from "../mockFilmList.ts"
+import {movies} from '../mockFilmList';
+
 @Component({
   selector: 'app-watchlist',
   templateUrl: './watchlist.component.html',
   styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
-  movies;
-  constructor() { 
-     this.movies = movies;
+  movies = movies;
+  constructor(){
+    
   }
 
   ngOnInit(): void {
