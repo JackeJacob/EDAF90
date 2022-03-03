@@ -1,1 +1,8 @@
 <p>watchlist works!</p>
+
+<div *ngFor="let movie of movies"> 
+    <h3> {{movie.name}}</h3>
+    <button type="button" (click)="addNote()">
+        Note
+    </button>
+</div>
