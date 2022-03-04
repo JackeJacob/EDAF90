@@ -1,12 +1,43 @@
-<h2>{{movie}}</h2>
-<img width="250" alt="movies" src="{{list[0].poster}}" />
-<p>År: {{list[0].year}}</p>
-<p>Längd: {{list[0].runtime}} min</p>
-<p>Genre:</p>
-<mat-chip-list  *ngFor="let genre of list[0].genre" >
-    <mat-chip>{{genre}}</mat-chip>
-</mat-chip-list>
-<p>Regissör: {{list[0].director}}</p>
-<p>Sammanfattning: {{list[0].plot}}</p>
+<div>
+<mat-card class="card">
+    <div class="title">
+        <mat-card-header>
+            <mat-card-title>{{movie}}</mat-card-title>
+        </mat-card-header>
+    </div>
+    
+    <mat-divider></mat-divider>
 
+    <div></div>
 
+    <mat-grid-list cols="4" rowHeight="500px">
+        <mat-grid-tile colspan="1">
+            <img mat-card-image alt="movies" src="{{list[0].poster}}" />
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="3">
+            <mat-card-content>
+                <div class="content">
+                    <p>År: {{list[0].year}}</p>
+                </div>
+                <div class="content">
+                    <p>Längd: {{list[0].runtime}} min</p>
+                </div>
+                <div class="content">
+                    <p style="padding-right: 0.5em;">Genre: </p>
+                    <mat-chip-list *ngFor="let genre of list[0].genre">
+                        <mat-chip style="margin-right: 0.5em;">{{genre}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+                <div class="content">
+                    <p>Regissör: {{list[0].director}}</p>
+                </div>
+                <div class="content">
+                    <p>Sammanfattning: {{list[0].plot}}</p>
+                </div>
+
+            </mat-card-content>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
+</div>

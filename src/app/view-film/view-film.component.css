@@ -1,0 +1,28 @@
+
+.card {
+    background: #fafafa;
+    justify-content: center;
+    max-width: 90em;
+  }
+
+.content {
+    display: flex;
+    justify-content: left;
+    padding-left: 1em;
+    margin-top: auto;
+}
+
+.title {
+    max-width: 90em;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+div {
+    margin-top: 1em;
+}
+
+mat-card-header {
+    padding: 50xp;
+}

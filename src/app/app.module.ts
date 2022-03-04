@@ -16,6 +16,9 @@ import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import {MatChipsModule} from '@angular/material/chips';
     MatToolbarModule,
     MatButtonModule,
     AppRoutingModule,
-    MatChipsModule
+    MatChipsModule,
+    MatCardModule,
+    MatGridListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
