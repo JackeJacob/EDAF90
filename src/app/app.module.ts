@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app.RoutingModule';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     NavigationBarComponent,
     NoteComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
