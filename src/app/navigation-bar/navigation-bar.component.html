@@ -1,1 +1,10 @@
-<p>navigation-bar works!</p>
+<nav>
+<mat-toolbar color="primary">
+    <span></span>
+    <a mat-icon-button routerLink="/" routerLinkActive="active"><mat-icon>home</mat-icon></a> 
+    <a mat-button routerLink="/WatchList" routerLinkActive="active">My Movie Library</a>
+    <a mat-button routerLink="/Search" routerLinkActive="active">Search For Movies</a>
+</mat-toolbar>
+</nav>
+
+<router-outlet></router-outlet>

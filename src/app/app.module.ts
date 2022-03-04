@@ -9,6 +9,10 @@ import { NoteComponent } from './note/note.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from  '@angular/material/form-field';
 import {MatInputModule} from  '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { AppRoutingModule } from './app.RoutingModule';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,17 @@ import {MatInputModule} from  '@angular/material/input';
     WatchlistComponent,
     ViewFilmComponent,
     NavigationBarComponent,
-    NoteComponent
+    NoteComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
