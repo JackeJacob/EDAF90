@@ -1,1 +1,12 @@
-<p>view-film works!</p>
+<h2>{{movie}}</h2>
+<img width="250" alt="movies" src="{{list[0].poster}}" />
+<p>År: {{list[0].year}}</p>
+<p>Längd: {{list[0].runtime}} min</p>
+<p>Genre:</p>
+<mat-chip-list  *ngFor="let genre of list[0].genre" >
+    <mat-chip>{{genre}}</mat-chip>
+</mat-chip-list>
+<p>Regissör: {{list[0].director}}</p>
+<p>Sammanfattning: {{list[0].plot}}</p>
+
+

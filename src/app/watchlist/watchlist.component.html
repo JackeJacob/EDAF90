@@ -1,8 +1,10 @@
-<p>watchlist works!</p>
-
-<div *ngFor="let movie of movies"> 
-    <h3> {{movie.name}}</h3>
-    <button type="button" (click)="addNotes()">
-        Note
-    </button>
+<h1>My movie library</h1>
+<div *ngFor="let movie of movies">
+    
+        <a mat-button routerLink="{{movie.name}}" >{{movie.name}}</a>
+        <button type="button" (click)="addNotes()">
+            Note
+        </button>
+    
 </div>
+

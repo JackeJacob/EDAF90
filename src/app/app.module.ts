@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app.RoutingModule';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatInputModule,
     MatToolbarModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

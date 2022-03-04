@@ -8,8 +8,7 @@ import {movies} from '../mockFilmList';
 })
 export class WatchlistComponent implements OnInit {
   movies = movies;
-  constructor(){
-    
+  constructor(){  
   }
 
   ngOnInit(): void {

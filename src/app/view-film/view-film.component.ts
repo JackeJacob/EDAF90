@@ -1,4 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {movies} from '../mockFilmList';
+
 
 @Component({
   selector: 'app-view-film',
@@ -6,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-film.component.css']
 })
 export class ViewFilmComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(
+    private router: Router,
+    
+  ) { }
+  list = movies;
+  movie = this.router.url.split("/")[2];
 
   ngOnInit(): void {
   }
