@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app.RoutingModule';
 import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchComponent } from './search/search.component';
     ViewFilmComponent,
     NavigationBarComponent,
     NoteComponent,
-    SearchComponent
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
