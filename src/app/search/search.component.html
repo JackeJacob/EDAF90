@@ -1,9 +1,18 @@
 <div class="content" role="main">
 <h1 style="color: #1976d2;">Search for your movie here!</h1>
   <mat-form-field floatLabel="never" appearance="fill">
-    <mat-label>Ex. Shawshank Redemption</mat-label>
-    <input matInput>
+    <input matInput placeholder="Search" aria-label="State" [matAutocomplete]="auto" [formControl]="searchMoviesCtrl">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
+      <ng-container *ngIf="!isLoading">
+        <mat-option *ngFor="let movie of filteredMovies" [value]="movie.Title">
+          <span><b>{{movie.Title}}</b> ({{movie.Year}})</span>
+        </mat-option>
+      </ng-container>
+    </mat-autocomplete>
   </mat-form-field>
-  <p style="margin-bottom: 1cm;"></p>
+  <br>
+  
+  
   
 </div>
