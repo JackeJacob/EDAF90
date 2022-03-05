@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import {movies} from '../mockFilmList';
 
 
@@ -13,17 +13,11 @@ export class ViewFilmComponent implements OnInit {
   
   constructor(
     private router: Router,
-    private route: ActivatedRoute 
   ) { }
   list = movies;
   movie = this.router.url.split("/")[2];
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      if(params['searchTerm']){
-        this.list = this.list;
-      }
-    })
   }
 
 }
