@@ -25,9 +25,9 @@
                         <p>Längd: {{movie.runtime}} min</p>
                     </div>
                     <div class="content">
-                        <p style="padding-right: 0.5em;">Genre: {{movie.genre}}</p>
-                        <mat-chip-list *ngFor="let genres of movie.genre">
-                            <mat-chip style="margin-right: 0.5em;">{{genres}}</mat-chip>
+                        <p style="padding-right: 0.5em;">Genre:</p>
+                        <mat-chip-list >
+                            <mat-chip *ngFor="let genres of movie.genre" style="margin-right: 0.5em;">{{genres}}</mat-chip>
                         </mat-chip-list>
                     </div>
                     <div class="content">

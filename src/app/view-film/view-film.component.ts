@@ -47,7 +47,7 @@ returnMovie(data:string){
   name: iData.Title,
   year: iData.Year,
   runtime: iData.Runtime,
-  genre: iData.Genre,
+  genre: iData.Genre.split(","),
   director: iData.Director,
   plot: iData.Plot,
   poster: iData.Poster
