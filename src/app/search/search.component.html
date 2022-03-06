@@ -4,10 +4,7 @@
     <input matInput placeholder="Search" [formControl]="searchMoviesCtrl"> 
   </mat-form-field>
   <br>
-  <div *ngIf = "filteredMovies !=undefined">
-    <h3>Movie: {{filteredMovies.name}}</h3>
-  </div> 
-  
-  
+    <a *ngIf = "filteredMovies !=undefined" mat-button routerLink="{{filteredMovies.name}}"><h2> {{filteredMovies.name}}</h2></a>
+
   
 </div>

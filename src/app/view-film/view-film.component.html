@@ -1,8 +1,9 @@
 <div>
+    
     <mat-card class="card">
         <div class="title">
             <mat-card-header>
-                <mat-card-title>{{movie}}</mat-card-title>
+                <mat-card-title>{{movie.name}}</mat-card-title>
             </mat-card-header>
         </div>
         
@@ -12,30 +13,29 @@
     
         <mat-grid-list cols="4" rowHeight="500px">
             <mat-grid-tile colspan="1">
-                <img mat-card-image alt="movies" src="{{list[0].poster}}" />
+                <img mat-card-image alt="movies" src="{{movie.poster}}" />
             </mat-grid-tile>
     
             <mat-grid-tile colspan="3">
                 <mat-card-content>
                     <div class="content">
-                        <p>År: {{list[0].year}}</p>
+                        <p>År: {{movie.year}}</p>
                     </div>
                     <div class="content">
-                        <p>Längd: {{list[0].runtime}} min</p>
+                        <p>Längd: {{movie.runtime}} min</p>
                     </div>
                     <div class="content">
-                        <p style="padding-right: 0.5em;">Genre: </p>
-                        <mat-chip-list *ngFor="let genre of list[0].genre">
-                            <mat-chip style="margin-right: 0.5em;">{{genre}}</mat-chip>
+                        <p style="padding-right: 0.5em;">Genre: {{movie.genre}}</p>
+                        <mat-chip-list *ngFor="let genres of movie.genre">
+                            <mat-chip style="margin-right: 0.5em;">{{genres}}</mat-chip>
                         </mat-chip-list>
                     </div>
                     <div class="content">
-                        <p>Regissör: {{list[0].director}}</p>
+                        <p>Regissör: {{movie.director}}</p>
                     </div>
                     <div class="content">
-                        <p>Sammanfattning: {{list[0].plot}}</p>
+                        <p>Sammanfattning: {{movie.plot}}</p>
                     </div>
-    
                 </mat-card-content>
             </mat-grid-tile>
         </mat-grid-list>
