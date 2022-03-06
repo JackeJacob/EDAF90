@@ -2,10 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { debounceTime, tap, switchMap, finalize } from 'rxjs/operators';
 import {Router} from '@angular/router';
 import {Movie, movies} from '../mockFilmList';
-import { Observable } from 'rxjs';
 
 
 
@@ -53,6 +51,9 @@ returnMovie(data:string){
   poster: iData.Poster
  }
  return item;
+}
+addMovie(){
+  //toDo
 }
 
 }

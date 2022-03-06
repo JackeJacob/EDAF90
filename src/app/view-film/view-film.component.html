@@ -1,9 +1,9 @@
-<div>
-    
+<div>    
     <mat-card class="card">
         <div class="title">
             <mat-card-header>
                 <mat-card-title>{{movie.name}}</mat-card-title>
+                
             </mat-card-header>
         </div>
         
@@ -38,6 +38,9 @@
                     </div>
                 </mat-card-content>
             </mat-grid-tile>
-        </mat-grid-list>
+            <button style="float: right; background-color: #1976d2; color: white;" mat-raised-button type="button" (click)="addMovie()" >
+                Add to libaray
+            </button>
+        </mat-grid-list>       
     </mat-card>
 </div>
