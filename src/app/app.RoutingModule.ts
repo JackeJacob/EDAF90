@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'Home', component: HomeComponent },
     { path: 'WatchList/:id', component: ViewFilmComponent},
     { path: 'Search/:id', component: ViewFilmComponent},
-    { path: 'Note', component: NoteComponent },
+    { path: 'WatchList/:id/Note', component: NoteComponent },
     { path: '', redirectTo: "/Home", pathMatch:"full" },
     {path: '**', pathMatch: 'full', 
     component: PageNotFoundComponent },

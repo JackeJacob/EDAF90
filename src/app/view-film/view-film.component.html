@@ -19,10 +19,10 @@
             <mat-grid-tile colspan="3">
                 <mat-card-content>
                     <div class="content">
-                        <p>År: {{movie.year}}</p>
+                        <p>Year: {{movie.year}}</p>
                     </div>
                     <div class="content">
-                        <p>Längd: {{movie.runtime}} min</p>
+                        <p>Runtime: {{movie.runtime}} min</p>
                     </div>
                     <div class="content">
                         <p style="padding-right: 0.5em;">Genre:</p>
@@ -31,14 +31,14 @@
                         </mat-chip-list>
                     </div>
                     <div class="content">
-                        <p>Regissör: {{movie.director}}</p>
+                        <p>Director: {{movie.director}}</p>
                     </div>
                     <div class="content">
-                        <p>Sammanfattning: {{movie.plot}}</p>
+                        <p>Plot: {{movie.plot}}</p>
                     </div>
                 </mat-card-content>
             </mat-grid-tile>
-            <button style="float: right; background-color: #1976d2; color: white;" mat-raised-button type="button" (click)="addMovie()" >
+            <button style="float: right;"  color="accent" mat-raised-button type="button" (click)="addMovie()" >
                 Add to library
             </button>
         </mat-grid-list>       

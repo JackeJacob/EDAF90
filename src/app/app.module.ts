@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatRadioModule } from '@angular/material/radio'
 import { AppComponent } from './app.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { ViewFilmComponent } from './view-film/view-film.component';
@@ -52,7 +52,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatRadioModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,29 @@
-<p>note works!</p>
+<app-view-film></app-view-film>
+<mat-card >
+    <mat-card-title>    
+        Your own thoughts!    
+    </mat-card-title>  
+    <mat-card-content>
+    <form>
+            <div class="content">
+                <label for="first-name">
+                    <h2>Rating:</h2>
+                </label>
+                <mat-radio-group>
+                <div *ngFor="let rating of ratings">
+                    <mat-radio-button id={{rating}} type="radio" class="custom-control-input" value={{rating}} name="rating"
+                        ngModel>
+                    <h3>{{rating}}</h3></mat-radio-button>
+                </div>
+            </mat-radio-group>
+            </div>
+       
+
+        
+        <mat-form-field class="demo-full-width">    
+            <textarea matInput placeholder="Notes" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>    
+        </mat-form-field>
+        <button mat-raised-button color="accent">Save</button>
+    </form>
+</mat-card-content> 
+</mat-card>
