@@ -1,10 +1,9 @@
 <h1>My movie library</h1>
-<div *ngFor="let movie of movies">
-    
-        <a mat-button routerLink="{{movie.name}}" >{{movie.name}}</a>
+
+    <div *ngFor="let movie of movieList">
+        <a mat-button routerLink="{{movie.name}}">{{movie.name}}</a>
         <button type="button" mat-button routerLink="/WatchList/{{movie.name}}/Note" routerLinkActive="active">
             Note
         </button>
-    
-</div>
-
+        
+    </div>

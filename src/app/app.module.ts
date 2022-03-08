@@ -23,6 +23,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { MovieService } from './movie.service';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     MatRadioModule,
     
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

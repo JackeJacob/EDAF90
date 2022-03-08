@@ -1,9 +1,12 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output, Injectable } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {Router} from '@angular/router';
 import {Movie, movies} from '../mockFilmList';
+import { MovieService } from '../movie.service';
+import { Subject, Observable} from 'rxjs';
+
 
 
 
@@ -12,18 +15,15 @@ import {Movie, movies} from '../mockFilmList';
   templateUrl: './view-film.component.html',
   styleUrls: ['./view-film.component.css']
 })
-export class ViewFilmComponent implements OnInit {
-
-  searchMoviesCtrl = new FormControl();
-  filteredMovies: any;
-  isLoading = false;
-  errorMsg: string;
-  
+@Injectable({
+  providedIn: 'root'
+  })
+export class ViewFilmComponent implements OnInit {   
   constructor(
     private router: Router,
-    private http: HttpClient
-  ) {this.errorMsg = ""; }
-  list = movies;
+    private http: HttpClient,
+    private movieService: MovieService
+  ){}
   movie: any;
   movietext: any;
 
@@ -35,25 +35,26 @@ export class ViewFilmComponent implements OnInit {
         this.movietext=Response;
         this.movie =this.returnMovie(JSON.stringify(this.movietext)); 
       })
-    
+
   }
-//creates a movie object from data
-returnMovie(data:string){
- let iData = JSON.parse(data);
- const item: Movie ={
-  id : iData.imdbID,
-  name: iData.Title,
-  year: iData.Year,
-  runtime: iData.Runtime,
-  genre: iData.Genre.split(","),
-  director: iData.Director,
-  plot: iData.Plot,
-  poster: iData.Poster
- }
- return item;
-}
-addMovie(){
-  //toDo
-}
+  //creates a movie object from data
+  returnMovie(data:string){
+  let iData = JSON.parse(data);
+  const item: Movie ={
+    id : iData.imdbID,
+    name: iData.Title,
+    year: iData.Year,
+    runtime: iData.Runtime,
+    genre: iData.Genre.split(","),
+    director: iData.Director,
+    plot: iData.Plot,
+    poster: iData.Poster
+  }
+  return item;
+  }
+
+  addMovie(){
+    this.movieService.addMovie(this.movie);
+  }
 
 }

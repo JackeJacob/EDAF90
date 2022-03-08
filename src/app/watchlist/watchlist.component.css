@@ -1,0 +1,12 @@
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mat-raised-button.mat-theme{
+    background-color: #1976d2;
+    color: #FFFF
+  }
