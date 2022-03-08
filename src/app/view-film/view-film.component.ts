@@ -7,9 +7,6 @@ import {Movie, movies} from '../mockFilmList';
 import { MovieService } from '../movie.service';
 import { Subject, Observable} from 'rxjs';
 
-
-
-
 @Component({
   selector: 'app-view-film',
   templateUrl: './view-film.component.html',
@@ -55,6 +52,10 @@ export class ViewFilmComponent implements OnInit {
 
   addMovie(){
     this.movieService.addMovie(this.movie);
+  }
+
+  buttonCondition(){
+    return true;
   }
 
 }

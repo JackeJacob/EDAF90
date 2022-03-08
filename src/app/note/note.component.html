@@ -1,29 +1,41 @@
-<app-view-film></app-view-film>
-<mat-card >
-    <mat-card-title>    
-        Your own thoughts!    
-    </mat-card-title>  
-    <mat-card-content>
-    <form>
-            <div class="content">
-                <label for="first-name">
-                    <h2>Rating:</h2>
-                </label>
-                <mat-radio-group>
-                <div *ngFor="let rating of ratings">
-                    <mat-radio-button id={{rating}} type="radio" class="custom-control-input" value={{rating}} name="rating"
-                        ngModel>
-                    <h3>{{rating}}</h3></mat-radio-button>
-                </div>
-            </mat-radio-group>
-            </div>
-       
 
-        
-        <mat-form-field class="demo-full-width">    
-            <textarea matInput placeholder="Notes" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>    
-        </mat-form-field>
-        <button mat-raised-button color="accent">Save</button>
-    </form>
-</mat-card-content> 
-</mat-card>
+<app-view-film></app-view-film>
+
+<mat-card style="display: inline-block !important; background: #fafafa;">      
+    <mat-card-title>    
+        Add your own thoughts!    
+    </mat-card-title>  
+    <mat-card-content>    
+        <form>    
+            <table>      
+                <tr>    
+                    <td colspan="2">    
+                        <mat-form-field class="demo-full-width">    
+                            <textarea matInput placeholder="Notes" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>    
+                        </mat-form-field>    
+                    </td>    
+                </tr>        
+                <tr>    
+                    <td>    
+                        <span>Rating</span><br><br> 
+                        
+                        <mat-radio-group>    
+                            <mat-radio-button *ngFor="let rating of ratings" id={{rating}} value={{rating}} style="padding: 1em;"> {{rating}} </mat-radio-button>
+                        </mat-radio-group>    
+                    </td>        
+                </tr>    
+   
+                <tr>    
+                    <td colspan="2">    
+    
+                    </td>    
+                </tr>    
+                <tr>    
+                    <td colspan="2" class="content-center">    
+                        <button mat-raised-button color="accent" (click)="addNote()">Save</button>     
+                    </td>    
+                </tr>    
+            </table>    
+        </form>    
+    </mat-card-content>    
+</mat-card>   

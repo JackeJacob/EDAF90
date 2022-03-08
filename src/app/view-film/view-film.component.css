@@ -2,7 +2,10 @@
 .card {
     background: #fafafa;
     justify-content: center;
-    max-width: 90em;
+    min-width: 70%;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: inline-block !important
   }
 
 .content {

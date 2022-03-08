@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { MovieService } from './movie.service';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { MovieService } from './movie.service';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatRadioModule,
-    
+    MatListModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
