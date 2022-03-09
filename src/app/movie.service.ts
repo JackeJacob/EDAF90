@@ -24,6 +24,7 @@ export class MovieService {
     this.movieList.push(movie);
     //this.movieSource.next(this.movieList);
     localStorage.setItem("movieList",JSON.stringify(this.movieList));
+    return movie;
   }
   
   getList(){
@@ -31,12 +32,20 @@ export class MovieService {
   }
   
   removeMovie(movie:Movie){
-   this.movieList = this.movieList.filter(mo => mo.name != movie.name)
-    localStorage.setItem("movieList",JSON.stringify(this.movieList));
+   this.movieList = this.movieList.filter(mo => mo.name !== movie.name)
+   localStorage.setItem("movieList",JSON.stringify(this.movieList))
+   return movie;
  //Todo
   }
   clerList(){
     this.movieList = [];
     localStorage.clear();
+  }
+  addNote(form:{rating:string, note:string}, movie:string){
+    let temp = this.movieList.filter(mo => mo.name === movie)[0];
+    this.removeMovie(temp);
+    temp.note = form.note;
+    temp.rating = form.rating;
+    this.addMovie(temp);
   }
 }

@@ -34,7 +34,13 @@
                 </div>
                 <div class="content">
                     <p>Plot: {{movie.plot}}</p>
+                </div> 
+                <div class="content">
+                   <p>Note: {{movie.note}}</p> 
                 </div>
+                <div class="content">
+                    <p>Rating: {{movie.rating}}</p> 
+                 </div>
             </mat-card-content>
         </mat-grid-tile>
         <button style="float: right;" color="accent" mat-raised-button type="button" (click)="addMovie()" *ngIf="addButtonCondition()">

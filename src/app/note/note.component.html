@@ -6,12 +6,12 @@
         Add your own thoughts!    
     </mat-card-title>  
     <mat-card-content>    
-        <form>    
+        <form [formGroup]="checkoutForm" (ngSubmit)="addNote()">    
             <table>      
                 <tr>    
                     <td colspan="2">    
                         <mat-form-field class="demo-full-width">    
-                            <textarea matInput placeholder="Notes" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>    
+                            <textarea matInput placeholder="Notes"  formControlName="note" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>    
                         </mat-form-field>    
                     </td>    
                 </tr>        
@@ -19,8 +19,8 @@
                     <td>    
                         <span>Rating</span><br><br> 
                         
-                        <mat-radio-group>    
-                            <mat-radio-button *ngFor="let rating of ratings" id={{rating}} value={{rating}} style="padding: 1em;"> {{rating}} </mat-radio-button>
+                        <mat-radio-group formControlName="rating">    
+                            <mat-radio-button  *ngFor="let rating of ratings" id={{rating}} value={{rating}} style="padding: 1em;"> {{rating}} </mat-radio-button>
                         </mat-radio-group>    
                     </td>        
                 </tr>    
@@ -32,7 +32,7 @@
                 </tr>    
                 <tr>    
                     <td colspan="2" class="content-center">    
-                        <button mat-raised-button color="accent" (click)="addNote()">Save</button>     
+                        <button mat-raised-button color="accent" type="submit">Save</button>     
                     </td>    
                 </tr>    
             </table>    

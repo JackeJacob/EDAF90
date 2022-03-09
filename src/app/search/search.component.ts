@@ -61,7 +61,9 @@ returnMovie(data:string){
   genre: iData.Genre,
   director: iData.Director,
   plot: iData.Plot,
-  poster: iData.Poster
+  poster: iData.Poster,
+  rating: "",
+  note: ""
  }
  return item;
 }

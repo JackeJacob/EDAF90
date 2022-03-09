@@ -46,7 +46,9 @@ export class ViewFilmComponent implements OnInit {
     genre: iData.Genre.split(","),
     director: iData.Director,
     plot: iData.Plot,
-    poster: iData.Poster
+    poster: iData.Poster,
+    rating: "",
+    note: ""
   }
   return item;
   }

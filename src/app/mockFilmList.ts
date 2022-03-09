@@ -7,6 +7,8 @@ export interface Movie {
     director: string[];
     plot: string;
     poster: string;
+    rating: string;
+    note: string;
 }
 
 export const movies= [
