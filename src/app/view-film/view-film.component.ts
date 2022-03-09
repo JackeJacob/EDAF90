@@ -50,6 +50,13 @@ export class ViewFilmComponent implements OnInit {
     rating: "",
     note: ""
   }
+  if(this.movieService.inList(item.name)){
+    let movieList = this.movieService.getList();
+    let temp = movieList.filter(mo => mo.name === item.name)[0];
+    item.rating = temp.rating;
+    item.note = temp.note;
+     
+  }
   return item;
   }
 

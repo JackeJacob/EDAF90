@@ -27,8 +27,9 @@ export class NoteComponent implements OnInit {
   }
 
   addNote( ){
-    console.log(this.checkoutForm.value)
-    this.movieService.addNote(this.checkoutForm.value, this.router.url.split("/")[2]);
+    console.log(this.checkoutForm.value);
+    this.movieService.addNote(this.checkoutForm.value, this.router.url.split("/")[2].split("%20").join(" "));
+    window.location.reload();
   }
 
 }

@@ -48,4 +48,11 @@ export class MovieService {
     temp.rating = form.rating;
     this.addMovie(temp);
   }
+  inList(movie:string){
+    let temp = this.movieList.filter(mo => mo.name === movie)
+    if(temp.length > 0){
+      return true
+    }
+    return false;  
+  }
 }
