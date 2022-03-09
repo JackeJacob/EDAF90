@@ -10,19 +10,21 @@ import { MovieService } from '../movie.service';
 })
 export class WatchlistComponent implements OnInit {
   public movieList: Movie[] = [];
-  private movieSource = new Subject<Movie[]>();
-  public movieList$ = this.movieSource.asObservable();
+ // private movieSource = new Subject<Movie[]>();
+ // public movieList$ = this.movieSource.asObservable();
   private movieMessage: Movie|undefined;
   constructor(private movieService: MovieService){ 
     
   }
 
   ngOnInit(): void {
-
     this.movieList=this.movieService.getList();
   }
   
-
+  clearList(){
+    this.movieService.clerList();
+    window.location.reload();
+  }
 
   addNotes(){
     //todo

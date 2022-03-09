@@ -37,8 +37,11 @@
                 </div>
             </mat-card-content>
         </mat-grid-tile>
-        <button style="float: right;" color="accent" mat-raised-button type="button" (click)="addMovie()" *ngIf="buttonCondition()">
-            Add to library
+        <button style="float: right;" color="accent" mat-raised-button type="button" (click)="addMovie()" *ngIf="addButtonCondition()">
+            <mat-icon>add_circle_outline</mat-icon> Add to library
+        </button>
+        <button style="float: right;" color="accent" mat-raised-button type="button" (click)="removeMovie()" *ngIf="removeButtonCondition()">
+            <mat-icon>delete_outline</mat-icon> Remove from library
         </button>
     </mat-grid-list>
 </mat-card>

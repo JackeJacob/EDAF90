@@ -23,10 +23,11 @@ export class ViewFilmComponent implements OnInit {
   ){}
   movie: any;
   movietext: any;
+  movieTitle = this.router.url.split("/")[2];
 
   //Reads Url to see what movie we lookin at
   ngOnInit(): void { 
-    this.http.get("http://www.omdbapi.com/?t=" + this.router.url.split("/")[2] + "&apikey=8d7e066e")
+    this.http.get("http://www.omdbapi.com/?t=" + this.movieTitle  + "&apikey=8d7e066e")
       .subscribe(Response => {
         console.log(Response);
         this.movietext=Response;
@@ -53,9 +54,23 @@ export class ViewFilmComponent implements OnInit {
   addMovie(){
     this.movieService.addMovie(this.movie);
   }
+  removeMovie(){
+    this.movieService.removeMovie(this.movie);
+  }
 
-  buttonCondition(){
+  addButtonCondition(){
+    let list = this.movieService.getList(); 
+      if(list.filter(el => el.name === this.movieTitle.split("%20").join(" ")).length > 0 ){
+        return false; 
+    }
     return true;
   }
+  removeButtonCondition(){
+    let list = this.movieService.getList(); 
+      if(list.filter(el => el.name === this.movieTitle.split("%20").join(" ")).length > 0 ){
+        return true; 
+    }
+    return false;
+  } 
 
 }

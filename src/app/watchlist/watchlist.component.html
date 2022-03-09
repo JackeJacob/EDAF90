@@ -1,10 +1,13 @@
 <h1 style="margin-left: 0.5em;">My movie library</h1>
+<button color="accent" mat-raised-button type="button" (click)="clearList()">
+    <mat-icon>delete_outline</mat-icon> Clear library
+</button>
 
-    <mat-nav-list>
-        <mat-list-item *ngFor="let movie of movieList">
-            <a matLine routerLink="{{movie.name}}">{{ movie.name }}</a>
-            <button mat-button routerLink="/WatchList/{{movie.name}}/Note" color="primary">
-                <mat-icon>add_circle_outline</mat-icon><span>Add note </span>
-            </button>
-         </mat-list-item>
-    </mat-nav-list>
+<mat-nav-list>
+    <mat-list-item *ngFor="let movie of movieList">
+        <a matLine routerLink="{{movie.name}}">{{ movie.name }}</a>
+        <button mat-button routerLink="/WatchList/{{movie.name}}/Note" color="primary">
+            <mat-icon>add_circle_outline</mat-icon><span>Add note </span>
+        </button>
+    </mat-list-item>
+</mat-nav-list>
